@@ -434,3 +434,4 @@ Version_3.0.0/frontend/node_modules/.cache/default-development/6.pack
 # Environment files
 *.env
 *.env.*
+Booner-v.3.1.17/backend/logs/*.rot
