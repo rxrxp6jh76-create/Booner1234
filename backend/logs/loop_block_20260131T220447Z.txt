@@ -1,0 +1,79 @@
+2026-01-31T22:04:47Z blocked 0.218s
+Thread 0x0000fca1037ef1a0 (most recent call first):
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fca103fff1a0 (most recent call first):
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fca117fff1a0 (most recent call first):
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fca1177ef1a0 (most recent call first):
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fca116fdf1a0 (most recent call first):
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fca12cd0f1a0 (most recent call first):
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fca12d61f1a0 (most recent call first):
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fca12df2f1a0 (most recent call first):
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fca12f14f1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fca12f95f1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fca13016f1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Current thread 0x0000fca1486ac020 (most recent call first):
+  File "/app/backend/instrumentation.py", line 32 in monitor_event_loop
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84 in _run
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936 in _run_once
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608 in run_forever
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641 in run_until_complete
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118 in run
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190 in run
+  File "/root/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 61 in run
+  File "/root/.venv/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 76 in subprocess_started
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 108 in run
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 314 in _bootstrap
+  File "/usr/local/lib/python3.11/multiprocessing/spawn.py", line 135 in _main
+  File "/usr/local/lib/python3.11/multiprocessing/spawn.py", line 122 in spawn_main
+  File "<string>", line 1 in <module>
