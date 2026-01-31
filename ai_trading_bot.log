@@ -1,0 +1,132 @@
+2026-01-26 08:00:13,469 - __main__ - INFO - 🤖 AI Trading Bot wird mit SQLite initialisiert...
+2026-01-26 08:00:13,471 - database_v2 - INFO - ✅ settings.db connected (WAL mode)
+2026-01-26 08:00:13,472 - database_v2 - INFO - ✅ trades.db connected (WAL mode)
+2026-01-26 08:00:13,473 - database_v2 - INFO - ✅ market_data.db connected (WAL mode)
+2026-01-26 08:00:13,473 - database_v2 - INFO - ✅ All databases connected
+2026-01-26 08:00:13,473 - database_v2 - INFO - ✅ Settings schema initialized
+2026-01-26 08:00:13,473 - database_v2 - INFO - ✅ Trades schema initialized (incl. ticket_strategy_map and reservations)
+2026-01-26 08:00:13,474 - database_v2 - INFO - ✅ Market data schema initialized
+2026-01-26 08:00:13,474 - database_v2 - INFO - ℹ️ No old database to migrate
+2026-01-26 08:00:13,474 - database_v2 - INFO - ✅ All database schemas initialized
+2026-01-26 08:00:13,474 - database - INFO - ✅ Multi-Database System v2.3.31 initialized
+2026-01-26 08:00:14,049 - ai_chat_service - INFO - 🏠 Initializing Ollama: http://127.0.0.1:11434 with model llama3.2:latest
+2026-01-26 08:00:14,049 - __main__ - INFO - ✅ LLM initialisiert: ollama/llama3.2
+2026-01-26 08:00:14,049 - strategies.mean_reversion - INFO - 🎯 Mean Reversion Strategy initialized: enabled=True
+2026-01-26 08:00:14,049 - strategies.momentum_trading - INFO - 🎯 Momentum Trading Strategy initialized: enabled=True
+2026-01-26 08:00:14,049 - strategies.breakout_trading - INFO - 🎯 Breakout Trading Strategy initialized: enabled=True
+2026-01-26 08:00:14,049 - strategies.grid_trading - INFO - 🎯 Grid Trading Strategy initialized: enabled=True
+2026-01-26 08:00:14,049 - __main__ - INFO - ✅ Alle 7 Trading-Strategien initialisiert
+2026-01-26 08:00:14,049 - __main__ - INFO - ✅ Bot initialisiert | Auto-Trading: True
+2026-01-26 08:00:14,049 - __main__ - INFO - 🔍 Prüfe offene Trades auf fehlende Settings...
+2026-01-26 08:00:14,247 - metaapi_sdk_connector - INFO - ✅ macOS asyncio policy set
+2026-01-26 08:00:14,247 - multi_platform_connector - INFO - ℹ️  Libertex Real Account not configured (only Demo available)
+2026-01-26 08:00:14,248 - multi_platform_connector - INFO - ℹ️  ICMarkets Real Account not configured (only Demo available)
+2026-01-26 08:00:14,248 - multi_platform_connector - INFO - MultiPlatformConnector (SDK) initialized with 6 platform(s)
+2026-01-26 08:00:14,248 - __main__ - INFO - 📊 Gefunden: 0 offene Positionen
+2026-01-26 08:00:14,248 - __main__ - INFO - ✓ Alle offenen Trades haben bereits Settings
+2026-01-26 08:00:14,248 - __main__ - INFO - 🚀 AI Trading Bot gestartet - läuft kontinuierlich!
+2026-01-26 08:00:14,248 - __main__ - INFO - 
+============================================================
+2026-01-26 08:00:14,248 - __main__ - INFO - 🤖 Bot Iteration #1 - 08:00:14
+2026-01-26 08:00:14,248 - __main__ - INFO - ============================================================
+/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/backend/ai_trading_bot.py:475: RuntimeWarning: coroutine 'DummyMarketHistory.find' was never awaited
+  if current_price > 0:
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+2026-01-26 08:00:14,373 - __main__ - INFO - 📊 Marktdaten aktualisiert: 50 Rohstoffe
+2026-01-26 08:00:14,373 - __main__ - INFO - 🛰️ Starting monitor loop (interval=30s)
+2026-01-26 08:00:14,373 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/backend/ai_trading_bot.py:3154: RuntimeWarning: coroutine 'TradeSettingsWrapper.find' was never awaited
+  return []
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+2026-01-26 08:00:44,375 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:01:14,378 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:01:44,380 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:02:14,382 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:02:44,385 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:03:14,387 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:03:44,390 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:04:14,394 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:04:44,396 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:05:14,399 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:05:44,409 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:06:14,415 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:06:44,418 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:07:14,450 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:07:44,452 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:08:14,454 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:08:44,456 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:09:14,458 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:09:44,461 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:10:14,464 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:10:44,467 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:11:14,469 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:11:44,471 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:12:14,473 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:12:44,476 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:13:14,477 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:13:44,480 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:14:14,482 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:14:44,484 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:15:14,486 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:15:44,488 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:16:14,490 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:16:44,492 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:17:14,494 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:17:44,495 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:18:14,499 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:18:44,502 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:19:14,504 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:19:44,507 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:20:14,509 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:20:44,511 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:21:14,513 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:21:44,514 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:22:14,517 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:22:44,519 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:23:14,523 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:23:44,525 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:24:14,527 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:24:44,529 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:25:14,532 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:25:44,534 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:26:14,536 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:26:44,538 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:27:14,540 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:27:44,542 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:28:14,543 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:28:44,545 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:29:14,547 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:29:44,549 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:30:14,550 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:30:44,553 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:31:14,554 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:31:44,556 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:32:14,558 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:32:44,560 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:33:14,561 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:33:44,566 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:34:14,568 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:34:44,570 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:35:14,572 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:35:44,575 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:36:14,577 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:36:44,579 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:37:14,581 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:37:44,583 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:38:14,584 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:38:44,586 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:39:14,588 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:39:44,590 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:40:14,593 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:40:44,596 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:41:14,599 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:41:44,601 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:42:14,603 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:42:44,605 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:43:14,607 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:43:44,609 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:44:14,610 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:44:44,613 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:45:14,614 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:45:44,616 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'
+2026-01-26 08:46:14,618 - __main__ - ERROR - Error getting all open positions: 'coroutine' object has no attribute 'to_list'

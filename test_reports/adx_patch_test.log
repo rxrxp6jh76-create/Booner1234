@@ -1,0 +1,196 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.0, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.8 Visual Studio
+plugins: anyio-4.11.0
+collected 18 items
+
+backend_test.py E                                                        [  5%]
+test_trading_fixes_v33.py ......                                         [ 38%]
+tests/test_ai_monitoring.py F                                            [ 44%]
+tests/test_ai_per_account_cooldown.py F                                  [ 50%]
+tests/test_auto_close.py F                                               [ 55%]
+tests/test_concurrency.py .                                              [ 61%]
+tests/test_concurrency_v2.py FF                                          [ 72%]
+tests/test_db_reservations.py FF                                         [ 83%]
+tests/test_db_reservations_multiprocess.py F                             [ 88%]
+tests/test_strategy_selection.py FF                                      [100%]
+
+==================================== ERRORS ====================================
+_____________________ ERROR at setup of test_news_function _____________________
+file /Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.8 Visual Studio/backend_test.py, line 2878
+  def test_news_function(func):
+E       fixture 'func' not found
+>       available fixtures: anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.8 Visual Studio/backend_test.py:2878
+=================================== FAILURES ===================================
+________________________ test_evaluate_and_close_called ________________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+__________________________ test_same_platform_blocked __________________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+____________ test_check_auto_close_events_closes_profitable_trades _____________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_________________________ test_concurrent_same_symbol __________________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+______________________ test_concurrent_different_symbols _______________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_________________________ test_reservation_competition _________________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+_____________________ test_reservation_expiry_and_release ______________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+______________________ test_db_reservations_multiprocess _______________________
+
+    @pytest.mark.skipif(False, reason="Multiprocess DB tests")
+    def test_db_reservations_multiprocess():
+        # Use a temporary DB file for this test
+        with tempfile.TemporaryDirectory() as tmp:
+            db_file = os.path.join(tmp, 'trades_multi.db')
+            os.environ['SQLITE_DB_PATH'] = db_file
+    
+            resource = 'MT5_LIBERTEX_DEMO:GOLD'
+            owner1 = 'proc1'
+            owner2 = 'proc2'
+    
+            # Start two processes almost simultaneously
+            p1 = subprocess.Popen(['python3', 'tests/_reserve_client.py', resource, owner1, '20'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            time.sleep(0.1)
+            p2 = subprocess.Popen(['python3', 'tests/_reserve_client.py', resource, owner2, '20'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    
+            out1, err1 = p1.communicate(timeout=10)
+            out2, err2 = p2.communicate(timeout=10)
+    
+            s1 = out1.decode().strip()
+            s2 = out2.decode().strip()
+    
+            # Exactly one should be OK
+            oks = [s for s in (s1, s2) if s == 'OK']
+            fails = [s for s in (s1, s2) if s == 'FAIL']
+    
+>           assert len(oks) == 1, f"Expected exactly one OK, got: {s1!r}, {s2!r}"
+E           AssertionError: Expected exactly one OK, got: "ERROR No module named 'backend'", "ERROR No module named 'backend'"
+E           assert 0 == 1
+E            +  where 0 = len([])
+
+../Booner-v.3.1.7 chat now/tests/test_db_reservations_multiprocess.py:34: AssertionError
+____________ test_execute_ai_trade_switches_to_recommended_strategy ____________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+________________ test_execute_ai_trade_aborts_if_no_alternative ________________
+async def functions are not natively supported.
+You need to install a suitable plugin for your async framework, for example:
+  - anyio
+  - pytest-asyncio
+  - pytest-tornasync
+  - pytest-trio
+  - pytest-twisted
+=============================== warnings summary ===============================
+tests/test_auto_close.py:7
+  /Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.8 Visual Studio/tests/test_auto_close.py:7: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_strategy_selection.py:8
+  /Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.8 Visual Studio/tests/test_strategy_selection.py:8: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_strategy_selection.py:63
+  /Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.8 Visual Studio/tests/test_strategy_selection.py:63: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+test_trading_fixes_v33.py::test_cooldown_defaults
+  /opt/homebrew/lib/python3.14/site-packages/_pytest/python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but test_trading_fixes_v33.py::test_cooldown_defaults returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+test_trading_fixes_v33.py::test_intelligent_cooldown
+  /opt/homebrew/lib/python3.14/site-packages/_pytest/python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but test_trading_fixes_v33.py::test_intelligent_cooldown returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+test_trading_fixes_v33.py::test_strategy_from_signal
+  /opt/homebrew/lib/python3.14/site-packages/_pytest/python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but test_trading_fixes_v33.py::test_strategy_from_signal returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+test_trading_fixes_v33.py::test_strategy_in_trade_settings
+  /opt/homebrew/lib/python3.14/site-packages/_pytest/python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but test_trading_fixes_v33.py::test_strategy_in_trade_settings returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+test_trading_fixes_v33.py::test_all_strategies_available
+  /opt/homebrew/lib/python3.14/site-packages/_pytest/python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but test_trading_fixes_v33.py::test_all_strategies_available returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+test_trading_fixes_v33.py::test_v322_logic
+  /opt/homebrew/lib/python3.14/site-packages/_pytest/python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but test_trading_fixes_v33.py::test_v322_logic returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_ai_monitoring.py::test_evaluate_and_close_called - Failed: ...
+FAILED tests/test_ai_per_account_cooldown.py::test_same_platform_blocked - Fa...
+FAILED tests/test_auto_close.py::test_check_auto_close_events_closes_profitable_trades
+FAILED tests/test_concurrency_v2.py::test_concurrent_same_symbol - Failed: as...
+FAILED tests/test_concurrency_v2.py::test_concurrent_different_symbols - Fail...
+FAILED tests/test_db_reservations.py::test_reservation_competition - Failed: ...
+FAILED tests/test_db_reservations.py::test_reservation_expiry_and_release - F...
+FAILED tests/test_db_reservations_multiprocess.py::test_db_reservations_multiprocess
+FAILED tests/test_strategy_selection.py::test_execute_ai_trade_switches_to_recommended_strategy
+FAILED tests/test_strategy_selection.py::test_execute_ai_trade_aborts_if_no_alternative
+ERROR backend_test.py::test_news_function
+============== 10 failed, 7 passed, 9 warnings, 1 error in 0.49s ===============

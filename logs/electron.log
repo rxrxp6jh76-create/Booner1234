@@ -1,0 +1,35 @@
+yarn run v1.22.22
+$ NODE_ENV=development electron .
+=== Booner Trade Starting with SQLite ===
+App paths: {
+  "appPath": "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/electron-app",
+  "dbPath": "/Users/dj1dbr/Library/Application Support/booner-trade/database",
+  "sqliteDbPath": "/Users/dj1dbr/Library/Application Support/booner-trade/database/trading.db",
+  "backendPath": "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/electron-app/backend"
+}
+🚀 Starting Booner Trade with SQLite...
+Electron version: 28.3.3
+Node version: 18.18.2
+Platform: darwin arm64
+✅ Using SQLite - No MongoDB installation required!
+🦙 Starting Ollama...
+✅ Ollama is already running
+⚙️  Starting Backend...
+📂 Database will be stored at: /Users/dj1dbr/Library/Application Support/booner-trade/database/trading.db
+Backend server.py not found at: /Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/electron-app/backend/server.py
+Backend server.py not found at: /Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/electron-app/backend/server.py
+❌ Startup failed: Error: Backend server.py not found at: /Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/electron-app/backend/server.py
+    at /Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/electron-app/main.js:171:16
+    at new Promise (<anonymous>)
+    at startBackend (/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/electron-app/main.js:158:10)
+    at App.<anonymous> (/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/electron-app/main.js:550:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+❌ Startup failed: Error: Backend server.py not found at: /Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/electron-app/backend/server.py
+    at /Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/electron-app/main.js:171:16
+    at new Promise (<anonymous>)
+    at startBackend (/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/electron-app/main.js:158:10)
+    at App.<anonymous> (/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.18 Kopie/electron-app/main.js:550:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+🛑 Shutting down...
+✅ SQLite Datenbank wird automatisch geschlossen
+Done in 1.89s.
