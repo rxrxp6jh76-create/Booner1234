@@ -1,0 +1,348 @@
+2026-01-17T01:16:54Z blocked 0.229s
+Thread 0x000000017ca3f000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000017ba33000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000017aa27000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000000179a1b000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000000178a0f000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000000177a03000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001769f7000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001759eb000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001749df000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001739d3000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001729c7000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001719bb000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001709af000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000016f9a3000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000016e997000 (most recent call first):
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000016d98b000 (most recent call first):
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000016c97f000 (most recent call first):
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Current thread 0x00000001f9cf0800 (most recent call first):
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/instrumentation.py", line 32 in monitor_event_loop
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 84 in _run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1936 in _run_once
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 608 in run_forever
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 641 in run_until_complete
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190 in run
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/uvicorn/server.py", line 61 in run
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/uvicorn/main.py", line 587 in run
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/uvicorn/main.py", line 416 in main
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/click/core.py", line 814 in invoke
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/click/core.py", line 1246 in invoke
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/click/core.py", line 1383 in main
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/click/core.py", line 1462 in __call__
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/bin/uvicorn", line 9 in <module>
+2026-01-17T01:16:54Z blocked 0.232s
+Thread 0x000000017ca3f000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000017ba33000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000017aa27000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000000179a1b000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000000178a0f000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000000177a03000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001769f7000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001759eb000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001749df000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001739d3000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001729c7000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001719bb000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001709af000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000016f9a3000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000016e997000 (most recent call first):
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000016d98b000 (most recent call first):
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000016c97f000 (most recent call first):
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Current thread 0x00000001f9cf0800 (most recent call first):
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/instrumentation.py", line 32 in monitor_event_loop
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 84 in _run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1936 in _run_once
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 608 in run_forever
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 641 in run_until_complete
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190 in run
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/uvicorn/server.py", line 61 in run
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/uvicorn/main.py", line 587 in run
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/uvicorn/main.py", line 416 in main
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/click/core.py", line 814 in invoke
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/click/core.py", line 1246 in invoke
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/click/core.py", line 1383 in main
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/click/core.py", line 1462 in __call__
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/bin/uvicorn", line 9 in <module>
+2026-01-17T01:16:54Z blocked 0.234s
+Thread 0x000000017ca3f000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000017ba33000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000017aa27000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000000179a1b000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000000178a0f000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000000177a03000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001769f7000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001759eb000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001749df000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001739d3000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001729c7000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001719bb000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x00000001709af000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000016f9a3000 (most recent call first):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 982 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000016e997000 (most recent call first):
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000016d98b000 (most recent call first):
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x000000016c97f000 (most recent call first):
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Current thread 0x00000001f9cf0800 (most recent call first):
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/instrumentation.py", line 32 in monitor_event_loop
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/events.py", line 84 in _run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1936 in _run_once
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 608 in run_forever
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 641 in run_until_complete
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118 in run
+  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190 in run
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/uvicorn/server.py", line 61 in run
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/uvicorn/main.py", line 587 in run
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/uvicorn/main.py", line 416 in main
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/click/core.py", line 814 in invoke
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/click/core.py", line 1246 in invoke
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/click/core.py", line 1383 in main
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/lib/python3.11/site-packages/click/core.py", line 1462 in __call__
+  File "/Users/dj1dbr/mein_python_projekt/Rohstofftrader/Booner-v.3.1.11 Kopie/backend/venv/bin/uvicorn", line 9 in <module>
