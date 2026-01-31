@@ -82,9 +82,9 @@ class BoonerTradeAPITester:
             self.log_test("Health API", False, f"Connection error: {str(e)}")
 
     def test_market_data_endpoint(self):
-        """Test /api/market/data endpoint"""
+        """Test /api/market/all endpoint (correct market data endpoint)"""
         try:
-            response = self.session.get(f"{self.api_base}/market/data")
+            response = self.session.get(f"{self.api_base}/market/all")
             
             if response.status_code == 200:
                 data = response.json()
