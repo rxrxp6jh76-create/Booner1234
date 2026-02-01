@@ -1747,16 +1747,55 @@ class TradeBot(BaseBot):
                     # ALLE CHECKS BESTANDEN - TRADE AUSFÜHREN AUF DIESER PLATTFORM
                     # ═══════════════════════════════════════════════════════════════
                     
-                    # Berechne Lot-Size basierend auf der Balance dieser Plattform
-                    risk_amount = balance * (base_risk_percent / 100)
+                    # V3.3.1: KORREKTE LOT-SIZE BERECHNUNG basierend auf Portfolio-Risiko
+                    # Bei 20% Portfolio-Risiko und 6 möglichen Positionen = max 3.3% pro Trade
+                    # Bei €1000 Balance und 3.3% Risiko = €33 max Risiko pro Trade
+                    
+                    MAX_POSITIONS_PLANNED = 6  # Wie viele Positionen gleichzeitig möglich sein sollen
+                    remaining_risk = MAX_PORTFOLIO_RISK - current_risk  # Verfügbares Risiko in %
+                    risk_per_trade = min(base_risk_percent, remaining_risk / max(1, MAX_POSITIONS_PLANNED - len(positions)))
+                    
+                    # Risiko-Betrag berechnen
+                    risk_amount = balance * (risk_per_trade / 100)
+                    
+                    # Lot-Size Berechnung mit korrekter Formel
+                    # Für Forex/Crypto: 1 Standard-Lot = 100.000 Einheiten
+                    # Formel: lot_size = risk_amount / (stop_loss_value * pip_value)
+                    # Vereinfacht: lot_size = risk_amount / (price * sl_percent * contract_size)
                     
                     if price > 0:
-                        lot_size = round(risk_amount / (price * 0.01), 2)
-                        lot_size = max(0.01, min(0.5, lot_size))
+                        # Stop-Loss ca. 1% vom Preis (typisch für Day-Trading)
+                        sl_percent = 0.01
+                        # Contract Size: 100 für Forex Standard-Lot
+                        contract_size = 100.0
+                        
+                        # Max Lot basierend auf verfügbarem Risiko
+                        # max_lot = risk_amount / (price * sl_percent * contract_size)
+                        calculated_lot = risk_amount / (price * sl_percent * contract_size)
+                        
+                        # Sicherheitslimits basierend auf Balance
+                        # Bei €1000 max 0.05, bei €10000 max 0.5, bei €100000 max 2.0
+                        if balance < 500:
+                            max_lot_for_balance = 0.01
+                        elif balance < 1000:
+                            max_lot_for_balance = 0.02
+                        elif balance < 2000:
+                            max_lot_for_balance = 0.05
+                        elif balance < 5000:
+                            max_lot_for_balance = 0.1
+                        elif balance < 10000:
+                            max_lot_for_balance = 0.2
+                        elif balance < 50000:
+                            max_lot_for_balance = 0.5
+                        else:
+                            max_lot_for_balance = 1.0
+                        
+                        lot_size = round(min(calculated_lot, max_lot_for_balance), 2)
+                        lot_size = max(0.01, lot_size)  # Minimum 0.01
                     else:
                         lot_size = 0.01
                     
-                    logger.info(f"🤖 {platform}: Lot-Size {lot_size} (Balance €{balance:,.2f}, Risiko {base_risk_percent}%)")
+                    logger.info(f"🤖 {platform}: Lot-Size {lot_size} (Balance €{balance:,.2f}, Risk/Trade {risk_per_trade:.2f}%, Risiko-Betrag €{risk_amount:.2f})")
                     
                     # Trading-Modus basierend auf Marktbedingungen
                     indicators = signal.get('indicators', {})
