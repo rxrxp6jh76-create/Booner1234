@@ -1972,7 +1972,7 @@ class AutonomousTradingIntelligence:
         if status.elapsed_minutes >= 30:
             # V3.3.1 FIX: Profit-basierter Drawdown (20% vom Peak, nicht 10%)
             # Auch bei negativem aktuellem Profit schließen wenn wir vom Peak 20% gefallen sind!
-            if current_profit is not None and status.peak_profit > 0:
+            if current_profit is not None and status.peak_profit is not None and status.peak_profit > 0:
                 profit_drawdown = status.peak_profit - current_profit
                 profit_drawdown_ratio = profit_drawdown / status.peak_profit if status.peak_profit > 0 else 0
 
