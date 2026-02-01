@@ -231,6 +231,217 @@ class BoonerTradeAPITester:
             except Exception as e:
                 self.log_test(name, False, f"Connection error: {str(e)}")
 
+    def test_lot_size_calculation(self):
+        """Test lot size calculation for €1000 balance - should be max 0.02 lot"""
+        try:
+            # Test lot size calculation endpoint or logic
+            test_data = {
+                "balance": 1000.0,
+                "commodity": "GOLD",
+                "confidence_score": 0.75,
+                "stop_loss_pips": 20,
+                "tick_value": 10.0,
+                "trading_mode": "neutral"
+            }
+            
+            # Try to find a lot size calculation endpoint
+            response = self.session.post(
+                f"{self.api_base}/calculate/lot-size", 
+                json=test_data,
+                headers={'Content-Type': 'application/json'}
+            )
+            
+            if response.status_code == 200:
+                data = response.json()
+                lot_size = data.get('lot_size', 0)
+                
+                if lot_size <= 0.02:
+                    self.log_test(
+                        "Lot Size Calculation (€1000 Balance)", 
+                        True, 
+                        f"Lot size {lot_size} is correctly ≤ 0.02 for €1000 balance"
+                    )
+                else:
+                    self.log_test(
+                        "Lot Size Calculation (€1000 Balance)", 
+                        False, 
+                        f"Lot size {lot_size} is too high for €1000 balance (should be ≤ 0.02)"
+                    )
+            elif response.status_code == 404:
+                # Endpoint might not exist, check if logic is embedded in trading logic
+                self.log_test(
+                    "Lot Size Calculation (€1000 Balance)", 
+                    False, 
+                    "Lot size calculation endpoint not found - may be embedded in trading logic"
+                )
+            else:
+                self.log_test(
+                    "Lot Size Calculation (€1000 Balance)", 
+                    False, 
+                    f"HTTP {response.status_code}: {response.text[:200]}"
+                )
+                
+        except Exception as e:
+            self.log_test("Lot Size Calculation (€1000 Balance)", False, f"Error: {str(e)}")
+
+    def test_peak_profit_tracking(self):
+        """Test peak profit tracking - should persist even when current profit is negative"""
+        try:
+            # Check if trades have peak_profit field
+            response = self.session.get(f"{self.api_base}/trades/list")
+            
+            if response.status_code == 200:
+                data = response.json()
+                trades = data.get('trades', []) if isinstance(data, dict) else data
+                
+                if trades and len(trades) > 0:
+                    # Check if any trade has peak_profit field
+                    has_peak_profit = any('peak_profit' in trade for trade in trades)
+                    
+                    if has_peak_profit:
+                        # Find a trade with peak_profit data
+                        peak_profit_trades = [t for t in trades if 'peak_profit' in t and t.get('peak_profit') is not None]
+                        
+                        if peak_profit_trades:
+                            sample_trade = peak_profit_trades[0]
+                            peak_profit = sample_trade.get('peak_profit')
+                            current_profit = sample_trade.get('profit_loss', sample_trade.get('profit', 0))
+                            
+                            self.log_test(
+                                "Peak Profit Tracking", 
+                                True, 
+                                f"Found trades with peak_profit field. Sample: peak={peak_profit}, current={current_profit}"
+                            )
+                        else:
+                            self.log_test(
+                                "Peak Profit Tracking", 
+                                True, 
+                                "Peak profit field exists but no trades with peak profit data yet"
+                            )
+                    else:
+                        self.log_test(
+                            "Peak Profit Tracking", 
+                            False, 
+                            "No trades found with peak_profit field"
+                        )
+                else:
+                    self.log_test(
+                        "Peak Profit Tracking", 
+                        True, 
+                        "No trades available to test peak profit tracking (expected if no active trades)"
+                    )
+            else:
+                self.log_test(
+                    "Peak Profit Tracking", 
+                    False, 
+                    f"Could not retrieve trades: HTTP {response.status_code}"
+                )
+                
+        except Exception as e:
+            self.log_test("Peak Profit Tracking", False, f"Error: {str(e)}")
+
+    def test_profit_drawdown_exit(self):
+        """Test profit drawdown exit at 20% from peak (not 10%)"""
+        try:
+            # Check settings for drawdown percentage
+            response = self.session.get(f"{self.api_base}/settings")
+            
+            if response.status_code == 200:
+                settings = response.json()
+                
+                # Look for drawdown-related settings
+                drawdown_settings = {}
+                for key, value in settings.items():
+                    if 'drawdown' in key.lower() or 'exit' in key.lower():
+                        drawdown_settings[key] = value
+                
+                # Check if there's a 20% drawdown setting
+                found_20_percent = False
+                for key, value in drawdown_settings.items():
+                    if isinstance(value, (int, float)) and value == 20:
+                        found_20_percent = True
+                        break
+                
+                if found_20_percent:
+                    self.log_test(
+                        "Profit Drawdown Exit (20%)", 
+                        True, 
+                        f"Found 20% drawdown setting in configuration: {drawdown_settings}"
+                    )
+                elif drawdown_settings:
+                    self.log_test(
+                        "Profit Drawdown Exit (20%)", 
+                        False, 
+                        f"Drawdown settings found but no 20% value: {drawdown_settings}"
+                    )
+                else:
+                    self.log_test(
+                        "Profit Drawdown Exit (20%)", 
+                        False, 
+                        "No drawdown-related settings found in configuration"
+                    )
+            else:
+                self.log_test(
+                    "Profit Drawdown Exit (20%)", 
+                    False, 
+                    f"Could not retrieve settings: HTTP {response.status_code}"
+                )
+                
+        except Exception as e:
+            self.log_test("Profit Drawdown Exit (20%)", False, f"Error: {str(e)}")
+
+    def test_portfolio_risk_warning(self):
+        """Test portfolio risk warning at >20%"""
+        try:
+            # Check settings for portfolio risk limits
+            response = self.session.get(f"{self.api_base}/settings")
+            
+            if response.status_code == 200:
+                settings = response.json()
+                
+                # Look for portfolio risk settings
+                risk_settings = {}
+                for key, value in settings.items():
+                    if 'portfolio' in key.lower() and 'risk' in key.lower():
+                        risk_settings[key] = value
+                    elif 'max_portfolio' in key.lower():
+                        risk_settings[key] = value
+                
+                # Check for 20% portfolio risk limit
+                found_20_percent_limit = False
+                for key, value in risk_settings.items():
+                    if isinstance(value, (int, float)) and value == 20:
+                        found_20_percent_limit = True
+                        break
+                
+                if found_20_percent_limit:
+                    self.log_test(
+                        "Portfolio Risk Warning (>20%)", 
+                        True, 
+                        f"Found 20% portfolio risk limit: {risk_settings}"
+                    )
+                elif risk_settings:
+                    self.log_test(
+                        "Portfolio Risk Warning (>20%)", 
+                        False, 
+                        f"Portfolio risk settings found but no 20% limit: {risk_settings}"
+                    )
+                else:
+                    self.log_test(
+                        "Portfolio Risk Warning (>20%)", 
+                        False, 
+                        "No portfolio risk settings found in configuration"
+                    )
+            else:
+                self.log_test(
+                    "Portfolio Risk Warning (>20%)", 
+                    False, 
+                    f"Could not retrieve settings: HTTP {response.status_code}"
+                )
+                
+        except Exception as e:
+            self.log_test("Portfolio Risk Warning (>20%)", False, f"Error: {str(e)}")
+
     def test_metaapi_integration(self):
         """Test MetaAPI integration endpoints"""
         metaapi_endpoints = [
