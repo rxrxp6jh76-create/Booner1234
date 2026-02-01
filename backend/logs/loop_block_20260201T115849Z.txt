@@ -1,0 +1,166 @@
+2026-02-01T11:58:49Z blocked 0.251s
+Thread 0x0000ff9c2daaf1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/curl_cffi/curl.py", line 362 in perform
+  File "/root/.venv/lib/python3.11/site-packages/curl_cffi/requests/session.py", line 640 in request
+  File "/root/.venv/lib/python3.11/site-packages/curl_cffi/requests/session.py", line 661 in get
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/data.py", line 417 in _make_request
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/data.py", line 371 in get
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/scrapers/history.py", line 210 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 132 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/app/backend/hybrid_data_fetcher.py", line 236 in fetch_from_yfinance
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000ff9c2e2bf1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3812 in get_loc
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/indexes/datetimes.py", line 630 in get_loc
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 6853 in get_slice_bound
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 6934 in slice_locs
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 6708 in slice_indexer
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/indexes/datetimes.py", line 682 in slice_indexer
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/indexing.py", line 1444 in _get_slice_axis
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/indexing.py", line 1412 in _getitem_axis
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/indexing.py", line 1192 in __getitem__
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/scrapers/history.py", line 388 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 132 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/app/backend/hybrid_data_fetcher.py", line 236 in fetch_from_yfinance
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000ff9c2f2df1a0 (most recent call first):
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000ff9c2faef1a0 (most recent call first):
+  File "/usr/local/lib/python3.11/logging/__init__.py", line 927 in acquire
+  File "/usr/local/lib/python3.11/logging/__init__.py", line 976 in handle
+  File "/usr/local/lib/python3.11/logging/__init__.py", line 1706 in callHandlers
+  File "/usr/local/lib/python3.11/logging/__init__.py", line 1644 in handle
+  File "/usr/local/lib/python3.11/logging/__init__.py", line 1634 in _log
+  File "/usr/local/lib/python3.11/logging/__init__.py", line 1489 in info
+  File "/app/backend/hybrid_data_fetcher.py", line 255 in fetch_from_yfinance
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000ff9c2eacf1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/array_algos/take.py", line 162 in _take_nd_ndarray
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/array_algos/take.py", line 117 in take_nd
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 804 in _slice_take_blocks_ax0
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 699 in reindex_indexer
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/internals/managers.py", line 913 in take
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4155 in take
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/generic.py", line 4175 in _take_with_is_copy
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 4128 in __getitem__
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 462 in auto_adjust
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/scrapers/history.py", line 475 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 132 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/app/backend/hybrid_data_fetcher.py", line 236 in fetch_from_yfinance
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000ff9c302ff1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/curl_cffi/curl.py", line 362 in perform
+  File "/root/.venv/lib/python3.11/site-packages/curl_cffi/requests/session.py", line 640 in request
+  File "/root/.venv/lib/python3.11/site-packages/curl_cffi/requests/session.py", line 661 in get
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/data.py", line 417 in _make_request
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/data.py", line 371 in get
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/scrapers/history.py", line 210 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 132 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/app/backend/hybrid_data_fetcher.py", line 236 in fetch_from_yfinance
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000ff9c489ef1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 3947 in get_indexer
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 6194 in get_indexer_for
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 6207 in _get_indexer_strict
+  File "/root/.venv/lib/python3.11/site-packages/pandas/core/frame.py", line 4119 in __getitem__
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/scrapers/history.py", line 505 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 132 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/app/backend/hybrid_data_fetcher.py", line 236 in fetch_from_yfinance
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000ff9c492ff1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/curl_cffi/curl.py", line 362 in perform
+  File "/root/.venv/lib/python3.11/site-packages/curl_cffi/requests/session.py", line 640 in request
+  File "/root/.venv/lib/python3.11/site-packages/curl_cffi/requests/session.py", line 661 in get
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/data.py", line 417 in _make_request
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/data.py", line 371 in get
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/scrapers/history.py", line 210 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 132 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/app/backend/hybrid_data_fetcher.py", line 236 in fetch_from_yfinance
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000ff9c4a51f1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000ff9c4ad2f1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000ff9c4b53f1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Current thread 0x0000ff9c63a4f020 (most recent call first):
+  File "/app/backend/instrumentation.py", line 32 in monitor_event_loop
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84 in _run
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936 in _run_once
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608 in run_forever
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641 in run_until_complete
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118 in run
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190 in run
+  File "/root/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 61 in run
+  File "/root/.venv/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 76 in subprocess_started
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 108 in run
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 314 in _bootstrap
+  File "/usr/local/lib/python3.11/multiprocessing/spawn.py", line 135 in _main
+  File "/usr/local/lib/python3.11/multiprocessing/spawn.py", line 122 in spawn_main
+  File "<string>", line 1 in <module>
