@@ -1916,10 +1916,15 @@ class AutonomousTradingIntelligence:
 
         # Profit-Peak-Tracking in Währung: Peak nur erhöhen, nie senken!
         if current_profit is not None:
-            # Peak-Logik: Peak nur setzen, wenn aktueller Profit höher als bisheriger Peak
-            if status.peak_profit is None:
-                status.peak_profit = current_profit
+            # V3.3.2: Peak-Logik verbessert - auch 0.0 prüfen!
+            if status.peak_profit is None or status.peak_profit == 0.0:
+                # Erster Peak-Wert
+                if current_profit > 0:
+                    status.peak_profit = current_profit
+                    logger.debug(f"[PEAK-INIT] {trade_id}: Initialer Peak = {current_profit:.2f}")
             elif current_profit > status.peak_profit:
+                # Neuer höherer Peak
+                logger.debug(f"[PEAK-UP] {trade_id}: Peak {status.peak_profit:.2f} → {current_profit:.2f}")
                 status.peak_profit = current_profit
             # Sinkt der Profit, bleibt peak_profit unverändert
             status.last_profit = current_profit
