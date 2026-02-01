@@ -477,6 +477,7 @@ class BoonerTradeAPITester:
     def run_all_tests(self):
         """Run all test suites"""
         print("🧪 Starting Booner Trade Backend API Tests...")
+        print("🎯 Focus: Lot-Size calculation, Peak-Profit tracking, Profit-Drawdown exit")
         print()
         
         # Core API tests
@@ -484,6 +485,12 @@ class BoonerTradeAPITester:
         self.test_market_data_endpoint()
         self.test_settings_endpoint()
         self.test_settings_save_load()
+        
+        # Specific bug fix tests
+        self.test_lot_size_calculation()
+        self.test_peak_profit_tracking()
+        self.test_profit_drawdown_exit()
+        self.test_portfolio_risk_warning()
         
         # Additional endpoint tests
         self.test_additional_endpoints()
