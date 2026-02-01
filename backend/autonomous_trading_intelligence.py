@@ -790,7 +790,7 @@ class RiskCircuitStatus:
 
     # Gewinn-Überwachung (Peak & Drawdown)
     peak_progress_percent: float = 0.0  # Bester Fortschritt Richtung TP
-    peak_profit: float = 0.0  # Bester Profit in Währung
+    peak_profit: Optional[float] = None  # V3.3.2: None statt 0.0, damit DB-Wert geladen wird
     last_profit: float = 0.0  # Letzter Profitwert
     
     # Trailing Stop Status
