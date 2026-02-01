@@ -3324,19 +3324,23 @@ async def get_trades(status: Optional[str] = None):
                         # 🆕 v3.1.19: Peak aus DB laden, nur erhöhen, und immer persistieren
                         profit_now = pos.get('profit')
                         peak_db_update_needed = False
+                        
+                        # V3.3.1 FIX: Peak immer aus DB laden, nicht zurücksetzen!
+                        saved_peak = None
+                        if settings:
+                            saved_peak = settings.get('peak_profit')
+                        
                         # Lade gespeicherten Peak aus DB falls nicht im Memory
-                        if peak_profit is None and settings:
-                            db_peak = settings.get('peak_profit')
-                            if db_peak is not None and db_peak > 0:
-                                peak_profit = db_peak
+                        if peak_profit is None and saved_peak is not None and saved_peak > 0:
+                            peak_profit = saved_peak
                             db_peak_progress = settings.get('peak_progress_percent')
                             if db_peak_progress is not None and db_peak_progress > 0:
                                 peak_progress = db_peak_progress
 
-                        # Peak nur bei positivem Gewinn relevant
-                        logger.info(f"[PEAK-DEBUG] Trade {trade_id}: profit_now={profit_now}, peak_profit={peak_profit}, settings={settings}")
+                        # Peak nur bei positivem Gewinn aktualisieren (aber NICHT zurücksetzen!)
+                        logger.info(f"[PEAK-DEBUG] Trade {trade_id}: profit_now={profit_now}, peak_profit={peak_profit}, saved_peak={saved_peak}")
                         if profit_now is not None and profit_now > 0:
-                            # Peak nur erhöhen
+                            # Peak nur erhöhen, nie senken!
                             if peak_profit is None or profit_now > peak_profit:
                                 logger.info(f"[PEAK-LOG] Neuer Peak für {trade_id}: alter Peak={peak_profit}, neuer Profit={profit_now}")
                                 peak_profit = profit_now
@@ -3344,10 +3348,11 @@ async def get_trades(status: Optional[str] = None):
                             else:
                                 logger.info(f"[PEAK-DEBUG] Kein neuer Peak für {trade_id}: profit_now={profit_now}, peak_profit={peak_profit}")
                         else:
-                            logger.info(f"[PEAK-DEBUG] Kein Peak-Update für {trade_id}: profit_now={profit_now} (nicht > 0)")
-                            # Behalte gespeicherten Peak, aber zeige ihn nicht an wenn aktuell im Verlust
-                            peak_profit = None
-                            peak_progress = None
+                            logger.info(f"[PEAK-DEBUG] Profit negativ für {trade_id}: profit_now={profit_now}, BEHALTE Peak={peak_profit}")
+                            # V3.3.1 FIX: Peak BEHALTEN auch wenn aktueller Profit negativ ist!
+                            # Der Peak zeigt den höchsten erreichten Gewinn, nicht den aktuellen!
+                            if saved_peak is not None and saved_peak > 0:
+                                peak_profit = saved_peak
 
                         # Persistiere neuen Peak in DB, falls gestiegen
                         if peak_db_update_needed and trade_id:
