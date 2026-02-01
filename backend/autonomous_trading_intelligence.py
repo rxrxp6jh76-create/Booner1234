@@ -1965,18 +1965,20 @@ class AutonomousTradingIntelligence:
             status.elapsed_minutes = int(elapsed.total_seconds() / 60)
 
         if status.elapsed_minutes >= 30:
-            # Primär: Profit-basierter Drawdown (Euro/Basiswährung)
-            if current_profit is not None and status.peak_profit > 0 and current_profit > 0:
+            # V3.3.1 FIX: Profit-basierter Drawdown (20% vom Peak, nicht 10%)
+            # Auch bei negativem aktuellem Profit schließen wenn wir vom Peak 20% gefallen sind!
+            if current_profit is not None and status.peak_profit > 0:
                 profit_drawdown = status.peak_profit - current_profit
                 profit_drawdown_ratio = profit_drawdown / status.peak_profit if status.peak_profit > 0 else 0
 
-                if profit_drawdown_ratio >= 0.10:
+                # V3.3.1: 20% Drawdown vom Peak statt 10%
+                if profit_drawdown_ratio >= 0.20:
                     logger.info(f"📉 PROFIT-DRAWDOWN EXIT für {trade_id}")
                     logger.info(f"   Peak Profit: {status.peak_profit:.2f}, Now: {current_profit:.2f} (-{profit_drawdown_ratio*100:.1f}%), Elapsed: {status.elapsed_minutes}min")
 
                     return {
                         'action': 'profit_drawdown_exit',
-                        'reason': f'Gewinn -10% vom Peak nach >=30min (Peak {status.peak_profit:.2f}, jetzt {current_profit:.2f})'
+                        'reason': f'Gewinn -20% vom Peak nach >=30min (Peak {status.peak_profit:.2f}, jetzt {current_profit:.2f})'
                     }
                 else:
                     logger.debug(
@@ -1989,13 +1991,14 @@ class AutonomousTradingIntelligence:
                 drawdown = status.peak_progress_percent - progress_percent
                 drawdown_ratio = drawdown / status.peak_progress_percent if status.peak_progress_percent > 0 else 0
 
-                if drawdown_ratio >= 0.10:
+                # V3.3.1: 20% Drawdown vom Peak statt 10%
+                if drawdown_ratio >= 0.20:
                     logger.info(f"📉 PROFIT-DRAWDOWN EXIT für {trade_id}")
                     logger.info(f"   Peak: {status.peak_progress_percent:.1f}%, Now: {progress_percent:.1f}% (-{drawdown_ratio*100:.1f}%), Elapsed: {status.elapsed_minutes}min")
 
                     return {
                         'action': 'profit_drawdown_exit',
-                        'reason': f'Gewinn -10% vom Peak nach >=30min (Peak {status.peak_progress_percent:.1f}%, jetzt {progress_percent:.1f}%)'
+                        'reason': f'Gewinn -20% vom Peak nach >=30min (Peak {status.peak_progress_percent:.1f}%, jetzt {progress_percent:.1f}%)'
                     }
                 else:
                     logger.debug(
