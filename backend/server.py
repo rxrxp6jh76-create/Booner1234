@@ -7094,10 +7094,11 @@ async def shutdown_event():
 
 # Mount static files (für Desktop-App)
 frontend_build_path = Path(__file__).parent.parent / "frontend" / "build"
+frontend_static_path = frontend_build_path / "static"
 
-if frontend_build_path.exists():
+if frontend_build_path.exists() and frontend_static_path.exists():
     # Serve static files (JS, CSS, etc.)
-    app.mount("/static", StaticFiles(directory=str(frontend_build_path / "static")), name="static")
+    app.mount("/static", StaticFiles(directory=str(frontend_static_path)), name="static")
     
     # Catch-all route für React Router (muss NACH allen API-Routen kommen)
     @app.get("/{full_path:path}")
