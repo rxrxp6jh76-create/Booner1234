@@ -1824,3 +1824,147 @@ HOCH - Trade nicht empfohlen
 - Signal-Confidence nur 0.75% (unter 70%)
 
 ---
+
+## 2026-02-02 13:42:07 - VETO
+
+**Asset:** GBPJPY
+**Confidence:** 5%
+**Historische Machbarkeit:** 55.0%
+
+### Begründung
+Pro-Gewicht: 30, Contra-Gewicht: 75, Netto: -45
+
+### Risk Assessment
+HOCH - Trade nicht empfohlen
+
+### Pro-Argumente
+- Ziel ist statistisch realistisch (keine Anomalie)
+- Technische Indikatoren unterstützen die Richtung
+- Technische Indikatoren unterstützen die Richtung
+
+### Contra-Argumente
+- TP liegt außerhalb des 48h-Bereichs (Max: 216.53)
+- Hohe Volatilität (4.0% ATR) erhöht SL-Risiko
+- Signal-Confidence nur 0.75% (unter 70%)
+
+---
+
+## 2026-02-02 13:42:07 - VETO
+
+**Asset:** GBPJPY
+**Confidence:** 5%
+**Historische Machbarkeit:** 55.0%
+
+### Begründung
+Pro-Gewicht: 30, Contra-Gewicht: 75, Netto: -45
+
+### Risk Assessment
+HOCH - Trade nicht empfohlen
+
+### Pro-Argumente
+- Ziel ist statistisch realistisch (keine Anomalie)
+- Technische Indikatoren unterstützen die Richtung
+- Technische Indikatoren unterstützen die Richtung
+
+### Contra-Argumente
+- TP liegt außerhalb des 48h-Bereichs (Max: 216.53)
+- Hohe Volatilität (4.0% ATR) erhöht SL-Risiko
+- Signal-Confidence nur 0.75% (unter 70%)
+
+---
+
+## 2026-02-02 13:42:07 - VETO
+
+**Asset:** CHFJPY
+**Confidence:** 5%
+**Historische Machbarkeit:** 55.0%
+
+### Begründung
+Pro-Gewicht: 30, Contra-Gewicht: 75, Netto: -45
+
+### Risk Assessment
+HOCH - Trade nicht empfohlen
+
+### Pro-Argumente
+- Ziel ist statistisch realistisch (keine Anomalie)
+- Technische Indikatoren unterstützen die Richtung
+- Technische Indikatoren unterstützen die Richtung
+
+### Contra-Argumente
+- TP liegt außerhalb des 48h-Bereichs (Max: 205.02)
+- Hohe Volatilität (4.0% ATR) erhöht SL-Risiko
+- Signal-Confidence nur 0.75% (unter 70%)
+
+---
+
+## 2026-02-02 13:42:07 - VETO
+
+**Asset:** CHFJPY
+**Confidence:** 5%
+**Historische Machbarkeit:** 55.0%
+
+### Begründung
+Pro-Gewicht: 30, Contra-Gewicht: 75, Netto: -45
+
+### Risk Assessment
+HOCH - Trade nicht empfohlen
+
+### Pro-Argumente
+- Ziel ist statistisch realistisch (keine Anomalie)
+- Technische Indikatoren unterstützen die Richtung
+- Technische Indikatoren unterstützen die Richtung
+
+### Contra-Argumente
+- TP liegt außerhalb des 48h-Bereichs (Max: 205.02)
+- Hohe Volatilität (4.0% ATR) erhöht SL-Risiko
+- Signal-Confidence nur 0.75% (unter 70%)
+
+---
+
+## 2026-02-02 13:42:07 - VETO
+
+**Asset:** CADJPY
+**Confidence:** 5%
+**Historische Machbarkeit:** 55.0%
+
+### Begründung
+Pro-Gewicht: 30, Contra-Gewicht: 75, Netto: -45
+
+### Risk Assessment
+HOCH - Trade nicht empfohlen
+
+### Pro-Argumente
+- Ziel ist statistisch realistisch (keine Anomalie)
+- Technische Indikatoren unterstützen die Richtung
+- Technische Indikatoren unterstützen die Richtung
+
+### Contra-Argumente
+- TP liegt außerhalb des 48h-Bereichs (Max: 116.65)
+- Hohe Volatilität (4.0% ATR) erhöht SL-Risiko
+- Signal-Confidence nur 0.75% (unter 70%)
+
+---
+
+## 2026-02-02 13:42:07 - VETO
+
+**Asset:** CADJPY
+**Confidence:** 5%
+**Historische Machbarkeit:** 55.0%
+
+### Begründung
+Pro-Gewicht: 30, Contra-Gewicht: 75, Netto: -45
+
+### Risk Assessment
+HOCH - Trade nicht empfohlen
+
+### Pro-Argumente
+- Ziel ist statistisch realistisch (keine Anomalie)
+- Technische Indikatoren unterstützen die Richtung
+- Technische Indikatoren unterstützen die Richtung
+
+### Contra-Argumente
+- TP liegt außerhalb des 48h-Bereichs (Max: 116.65)
+- Hohe Volatilität (4.0% ATR) erhöht SL-Risiko
+- Signal-Confidence nur 0.75% (unter 70%)
+
+---
