@@ -3341,50 +3341,54 @@ async def get_trades(status: Optional[str] = None):
                         profit_now = pos.get('profit')
                         peak_db_update_needed = False
                         
-                        # V3.3.2 FIX: IMMER zuerst Peak aus DB laden!
-                        # Der Memory-Wert (rc_state) kann 0.0 sein nach Server-Neustart
+                        # V3.3.3 FIX: Peak-Logik komplett überarbeitet
+                        # 1. IMMER zuerst aus DB laden (persistent)
+                        # 2. Nur erhöhen, NIEMALS senken
+                        # 3. Memory-Wert ignorieren wenn DB-Wert vorhanden
+                        
                         saved_peak = None
                         if settings:
                             saved_peak = settings.get('peak_profit')
+                            logger.debug(f"[PEAK] Trade {trade_id}: DB-Peak geladen = {saved_peak}")
                         
-                        # V3.3.2: DB-Peak hat IMMER Priorität über Memory!
-                        # Memory (rc_state) ist nur temporär, DB ist persistent
+                        # V3.3.3: DB-Peak hat ABSOLUTE Priorität!
+                        # Ignoriere Memory-Wert komplett wenn DB-Wert existiert
                         if saved_peak is not None and saved_peak > 0:
-                            # Wenn DB-Peak höher ist als Memory-Peak, nutze DB
-                            if peak_profit is None or peak_profit == 0.0 or saved_peak > peak_profit:
-                                peak_profit = saved_peak
-                                logger.info(f"[PEAK-DB] Trade {trade_id}: Peak aus DB geladen: {saved_peak}")
+                            peak_profit = saved_peak
+                            logger.debug(f"[PEAK-DB] Trade {trade_id}: Nutze DB-Peak = {saved_peak}")
+                        elif peak_profit is None or peak_profit <= 0:
+                            # Kein Peak in DB und kein valider Memory-Peak
+                            peak_profit = None
                         
-                        # Wenn kein Peak vorhanden, initialisiere mit aktuellem Profit
-                        if (peak_profit is None or peak_profit == 0.0) and profit_now is not None and profit_now > 0:
-                            peak_profit = profit_now
-                            peak_db_update_needed = True
-                            logger.info(f"[PEAK-INIT] Trade {trade_id}: Initialer Peak={profit_now}")
-
-                        # Peak nur bei positivem Gewinn aktualisieren (aber NICHT zurücksetzen!)
-                        logger.info(f"[PEAK-DEBUG] Trade {trade_id}: profit_now={profit_now}, peak_profit={peak_profit}, saved_peak={saved_peak}")
+                        # Peak nur aktualisieren wenn:
+                        # 1. Aktueller Profit > 0 (im Gewinn)
+                        # 2. Aktueller Profit > bisheriger Peak (neuer Höchststand)
+                        logger.debug(f"[PEAK-CHECK] Trade {trade_id}: profit_now={profit_now}, peak_profit={peak_profit}")
+                        
                         if profit_now is not None and profit_now > 0:
-                            # Peak NUR erhöhen wenn aktueller Profit WIRKLICH höher ist!
-                            if peak_profit is not None and peak_profit > 0:
-                                if profit_now > peak_profit:
-                                    logger.info(f"[PEAK-LOG] Neuer Peak für {trade_id}: alter Peak={peak_profit}, neuer Profit={profit_now}")
-                                    peak_profit = profit_now
-                                    peak_db_update_needed = True
-                                else:
-                                    logger.info(f"[PEAK-KEEP] Behalte Peak für {trade_id}: profit_now={profit_now}, peak_profit={peak_profit}")
-                            else:
-                                # Kein Peak vorhanden, setze initialen Peak
+                            if peak_profit is None or peak_profit <= 0:
+                                # Erster positiver Profit = erster Peak
                                 peak_profit = profit_now
                                 peak_db_update_needed = True
-                                logger.info(f"[PEAK-NEW] Erster Peak für {trade_id}: {profit_now}")
+                                logger.info(f"[PEAK-INIT] Trade {trade_id}: Erster Peak = {profit_now:.2f}")
+                            elif profit_now > peak_profit:
+                                # Neuer Höchststand!
+                                old_peak = peak_profit
+                                peak_profit = profit_now
+                                peak_db_update_needed = True
+                                logger.info(f"[PEAK-UP] Trade {trade_id}: Peak erhöht {old_peak:.2f} → {profit_now:.2f}")
+                            else:
+                                # Profit ist positiv aber unter Peak - Peak BEHALTEN
+                                logger.debug(f"[PEAK-HOLD] Trade {trade_id}: Profit {profit_now:.2f} < Peak {peak_profit:.2f} - behalte Peak")
                         else:
-                            logger.info(f"[PEAK-NEG] Profit negativ für {trade_id}: profit_now={profit_now}, BEHALTE Peak={peak_profit}")
-                            # V3.3.1 FIX: Peak BEHALTEN auch wenn aktueller Profit negativ ist!
+                            # Profit ist negativ oder 0 - Peak BEHALTEN (nicht ändern!)
+                            logger.debug(f"[PEAK-NEG] Trade {trade_id}: Profit {profit_now} negativ - Peak {peak_profit} bleibt")
+                            # Sicherstellen dass der DB-Peak verwendet wird
                             if saved_peak is not None and saved_peak > 0:
                                 peak_profit = saved_peak
 
-                        # Persistiere neuen Peak in DB, falls gestiegen
-                        if peak_db_update_needed and trade_id:
+                        # Persistiere neuen Peak in DB NUR wenn wirklich gestiegen
+                        if peak_db_update_needed and trade_id and peak_profit is not None and peak_profit > 0:
                             logger.info(f"[PEAK-LOG] Speichere neuen Peak in DB für {trade_id}: peak_profit={peak_profit}")
                             try:
                                 await db.trade_settings.update_one(
