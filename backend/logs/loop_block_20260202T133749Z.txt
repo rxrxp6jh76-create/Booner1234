@@ -1,0 +1,134 @@
+2026-02-02T13:37:49Z blocked 2.260s
+Thread 0x0000fe40f9fbf1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/data.py", line 48 in __call__
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 100 in __init__
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/ticker.py", line 39 in __init__
+  File "/app/backend/hybrid_data_fetcher.py", line 233 in fetch_from_yfinance
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fe40fa7cf1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/peewee.py", line 3322 in execute_sql
+  File "/root/.venv/lib/python3.11/site-packages/peewee.py", line 3330 in execute
+  File "/root/.venv/lib/python3.11/site-packages/peewee.py", line 2280 in _execute
+  File "/root/.venv/lib/python3.11/site-packages/peewee.py", line 2107 in execute
+  File "/root/.venv/lib/python3.11/site-packages/peewee.py", line 2036 in inner
+  File "/root/.venv/lib/python3.11/site-packages/peewee.py", line 7297 in get
+  File "/root/.venv/lib/python3.11/site-packages/peewee.py", line 6840 in get
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/cache.py", line 171 in lookup
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 145 in _get_ticker_tz
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 138 in _lazy_load_price_history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 132 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/app/backend/hybrid_data_fetcher.py", line 236 in fetch_from_yfinance
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fe40fbfff1a0 (most recent call first):
+  File "/usr/local/lib/python3.11/asyncio/selector_events.py", line 139 in _write_to_self
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 813 in call_soon_threadsafe
+  File "/usr/local/lib/python3.11/asyncio/futures.py", line 403 in _call_set_state
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 340 in _invoke_callbacks
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 550 in set_result
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 64 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fe40fb7ef1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/curl_cffi/curl.py", line 170 in _set_error_buffer
+  File "/root/.venv/lib/python3.11/site-packages/curl_cffi/curl.py", line 167 in __init__
+  File "/root/.venv/lib/python3.11/site-packages/curl_cffi/requests/session.py", line 408 in __init__
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 84 in __init__
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/ticker.py", line 39 in __init__
+  File "/app/backend/hybrid_data_fetcher.py", line 233 in fetch_from_yfinance
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fe40fafdf1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/data.py", line 48 in __call__
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 100 in __init__
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/ticker.py", line 39 in __init__
+  File "/app/backend/hybrid_data_fetcher.py", line 233 in fetch_from_yfinance
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fe4100dff1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/data.py", line 48 in __call__
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 100 in __init__
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/ticker.py", line 39 in __init__
+  File "/app/backend/hybrid_data_fetcher.py", line 233 in fetch_from_yfinance
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fe411947f1a0 (most recent call first):
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 81 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fe4119c8f1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/peewee.py", line 4596 in iterate
+  File "/root/.venv/lib/python3.11/site-packages/peewee.py", line 4685 in next
+  File "/root/.venv/lib/python3.11/site-packages/peewee.py", line 4630 in fill_cache
+  File "/root/.venv/lib/python3.11/site-packages/peewee.py", line 4582 in __getitem__
+  File "/root/.venv/lib/python3.11/site-packages/peewee.py", line 7297 in get
+  File "/root/.venv/lib/python3.11/site-packages/peewee.py", line 6840 in get
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/cache.py", line 171 in lookup
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 145 in _get_ticker_tz
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 138 in _lazy_load_price_history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/base.py", line 132 in history
+  File "/root/.venv/lib/python3.11/site-packages/yfinance/utils.py", line 92 in wrapper
+  File "/app/backend/hybrid_data_fetcher.py", line 236 in fetch_from_yfinance
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58 in run
+  File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 83 in _worker
+  File "/usr/local/lib/python3.11/threading.py", line 982 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fe411afaf1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fe411b7bf1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Thread 0x0000fe411bfcf1a0 (most recent call first):
+  File "/root/.venv/lib/python3.11/site-packages/aiosqlite/core.py", line 97 in run
+  File "/usr/local/lib/python3.11/threading.py", line 1045 in _bootstrap_inner
+  File "/usr/local/lib/python3.11/threading.py", line 1002 in _bootstrap
+
+Current thread 0x0000fe4134505020 (most recent call first):
+  File "/app/backend/instrumentation.py", line 32 in monitor_event_loop
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84 in _run
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936 in _run_once
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608 in run_forever
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641 in run_until_complete
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118 in run
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190 in run
+  File "/root/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 61 in run
+  File "/root/.venv/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 76 in subprocess_started
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 108 in run
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 314 in _bootstrap
+  File "/usr/local/lib/python3.11/multiprocessing/spawn.py", line 135 in _main
+  File "/usr/local/lib/python3.11/multiprocessing/spawn.py", line 122 in spawn_main
+  File "<string>", line 1 in <module>
