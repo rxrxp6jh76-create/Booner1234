@@ -599,6 +599,22 @@ class TradingSettings(BaseModel):
     autonomous_ki_enabled: bool = True  # KI entscheidet autonom über Trades
     
     # ═══════════════════════════════════════════════════════════════════════════
+    # V4.2: KOGNITIVE TRADING INTELLIGENZ (Ollama-basiert)
+    # ═══════════════════════════════════════════════════════════════════════════
+    
+    # Aktiviert die dreistufige kognitive Validierung vor jedem Trade
+    cognitive_validation: bool = True  # Default: AKTIV
+    
+    # Historische Machbarkeits-Analyse: Prüft ob TP im 48h-Bereich liegt
+    cognitive_historical_check: bool = True
+    
+    # Strategisches Reasoning: Ollama führt Pro/Contra Debatte
+    cognitive_reasoning_enabled: bool = True
+    
+    # Minimale Machbarkeit für Trade-Freigabe (0-100)
+    cognitive_min_feasibility: int = 30
+    
+    # ═══════════════════════════════════════════════════════════════════════════
     # V3.2.1: AUTO-CLOSE TOGGLES - Automatisches Schließen von Positionen im Plus
     # ═══════════════════════════════════════════════════════════════════════════
     
