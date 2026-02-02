@@ -576,3 +576,99 @@ HOCH - Trade nicht empfohlen
 - Allgemeines Marktrisiko und unvorhergesehene Events
 
 ---
+
+## 2026-02-02 13:39:23 - VETO
+
+**Asset:** EURUSD
+**Confidence:** 35%
+**Historische Machbarkeit:** 95.0%
+
+### Begründung
+Pro-Gewicht: 30, Contra-Gewicht: 45, Netto: -15
+
+### Risk Assessment
+HOCH - Trade nicht empfohlen
+
+### Pro-Argumente
+- Ziel liegt innerhalb des 48h-Preisbereichs
+- Ziel ist statistisch realistisch (keine Anomalie)
+- Technische Indikatoren unterstützen die Richtung
+
+### Contra-Argumente
+- Hohe Volatilität (4.0% ATR) erhöht SL-Risiko
+- Signal-Confidence nur 0.71% (unter 70%)
+- Allgemeines Marktrisiko und unvorhergesehene Events
+
+---
+
+## 2026-02-02 13:39:23 - VETO
+
+**Asset:** EURUSD
+**Confidence:** 35%
+**Historische Machbarkeit:** 95.0%
+
+### Begründung
+Pro-Gewicht: 30, Contra-Gewicht: 45, Netto: -15
+
+### Risk Assessment
+HOCH - Trade nicht empfohlen
+
+### Pro-Argumente
+- Ziel liegt innerhalb des 48h-Preisbereichs
+- Ziel ist statistisch realistisch (keine Anomalie)
+- Technische Indikatoren unterstützen die Richtung
+
+### Contra-Argumente
+- Hohe Volatilität (4.0% ATR) erhöht SL-Risiko
+- Signal-Confidence nur 0.71% (unter 70%)
+- Allgemeines Marktrisiko und unvorhergesehene Events
+
+---
+
+## 2026-02-02 13:39:23 - VETO
+
+**Asset:** EURUSD
+**Confidence:** 35%
+**Historische Machbarkeit:** 95.0%
+
+### Begründung
+Pro-Gewicht: 30, Contra-Gewicht: 45, Netto: -15
+
+### Risk Assessment
+HOCH - Trade nicht empfohlen
+
+### Pro-Argumente
+- Ziel liegt innerhalb des 48h-Preisbereichs
+- Ziel ist statistisch realistisch (keine Anomalie)
+- Technische Indikatoren unterstützen die Richtung
+
+### Contra-Argumente
+- Hohe Volatilität (4.0% ATR) erhöht SL-Risiko
+- Signal-Confidence nur 0.71% (unter 70%)
+- Allgemeines Marktrisiko und unvorhergesehene Events
+
+---
+
+## 2026-02-02 13:39:23 - VETO
+
+**Asset:** EURUSD
+**Confidence:** 35%
+**Historische Machbarkeit:** 95.0%
+
+### Begründung
+Pro-Gewicht: 30, Contra-Gewicht: 45, Netto: -15
+
+### Risk Assessment
+HOCH - Trade nicht empfohlen
+
+### Pro-Argumente
+- Ziel liegt innerhalb des 48h-Preisbereichs
+- Ziel ist statistisch realistisch (keine Anomalie)
+- Technische Indikatoren unterstützen die Richtung
+
+### Contra-Argumente
+- Hohe Volatilität (4.0% ATR) erhöht SL-Risiko
+- Signal-Confidence nur 0.71% (unter 70%)
+- Allgemeines Marktrisiko und unvorhergesehene Events
+
+---

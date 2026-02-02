@@ -1970,33 +1970,40 @@ class AutonomousTradingIntelligence:
             status.elapsed_minutes = int(elapsed.total_seconds() / 60)
 
         if status.elapsed_minutes >= 30:
-            # V3.3.1 FIX: Profit-basierter Drawdown (20% vom Peak, nicht 10%)
-            # Auch bei negativem aktuellem Profit schließen wenn wir vom Peak 20% gefallen sind!
+            # V3.3.3 FIX: Profit-basierter Drawdown (20% vom Peak)
+            # WICHTIG: NUR wenn aktueller Profit POSITIV ist!
+            # Wenn Trade im Minus ist, NICHT schließen wegen Drawdown vom Peak
             if current_profit is not None and status.peak_profit is not None and status.peak_profit > 0:
-                profit_drawdown = status.peak_profit - current_profit
-                profit_drawdown_ratio = profit_drawdown / status.peak_profit if status.peak_profit > 0 else 0
+                # V3.3.3: Nur im Gewinn prüfen! Nicht wenn aktueller Profit negativ ist.
+                if current_profit > 0:
+                    profit_drawdown = status.peak_profit - current_profit
+                    profit_drawdown_ratio = profit_drawdown / status.peak_profit if status.peak_profit > 0 else 0
 
-                # V3.3.1: 20% Drawdown vom Peak statt 10%
-                if profit_drawdown_ratio >= 0.20:
-                    logger.info(f"📉 PROFIT-DRAWDOWN EXIT für {trade_id}")
-                    logger.info(f"   Peak Profit: {status.peak_profit:.2f}, Now: {current_profit:.2f} (-{profit_drawdown_ratio*100:.1f}%), Elapsed: {status.elapsed_minutes}min")
+                    # V3.3.1: 20% Drawdown vom Peak
+                    if profit_drawdown_ratio >= 0.20:
+                        logger.info(f"📉 PROFIT-DRAWDOWN EXIT für {trade_id}")
+                        logger.info(f"   Peak Profit: {status.peak_profit:.2f}, Now: {current_profit:.2f} (-{profit_drawdown_ratio*100:.1f}%), Elapsed: {status.elapsed_minutes}min")
 
-                    return {
-                        'action': 'profit_drawdown_exit',
-                        'reason': f'Gewinn -20% vom Peak nach >=30min (Peak {status.peak_profit:.2f}, jetzt {current_profit:.2f})'
-                    }
+                        return {
+                            'action': 'profit_drawdown_exit',
+                            'reason': f'Gewinn -20% vom Peak nach >=30min (Peak {status.peak_profit:.2f}, jetzt {current_profit:.2f})'
+                        }
+                    else:
+                        logger.debug(
+                            f"Drawdown nicht erreicht für {trade_id}: peak={status.peak_profit:.2f}, now={current_profit:.2f}, "
+                            f"dd={profit_drawdown_ratio*100:.1f}%, elapsed={status.elapsed_minutes}min"
+                        )
                 else:
-                    logger.debug(
-                        f"Drawdown nicht erreicht für {trade_id}: peak={status.peak_profit:.2f}, now={current_profit:.2f}, "
-                        f"dd={profit_drawdown_ratio*100:.1f}%, elapsed={status.elapsed_minutes}min"
-                    )
+                    # Trade ist im Minus - KEIN Drawdown-Exit!
+                    logger.debug(f"Kein Drawdown-Check für {trade_id}: aktueller Profit {current_profit:.2f} ist negativ")
 
             # Fallback: Progress-basiert wenn kein Profit verfügbar
+            # V3.3.3: Auch hier nur bei positivem Progress!
             if status.peak_progress_percent > 0 and progress_percent > 0:
                 drawdown = status.peak_progress_percent - progress_percent
                 drawdown_ratio = drawdown / status.peak_progress_percent if status.peak_progress_percent > 0 else 0
 
-                # V3.3.1: 20% Drawdown vom Peak statt 10%
+                # V3.3.1: 20% Drawdown vom Peak
                 if drawdown_ratio >= 0.20:
                     logger.info(f"📉 PROFIT-DRAWDOWN EXIT für {trade_id}")
                     logger.info(f"   Peak: {status.peak_progress_percent:.1f}%, Now: {progress_percent:.1f}% (-{drawdown_ratio*100:.1f}%), Elapsed: {status.elapsed_minutes}min")
