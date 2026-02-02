@@ -1848,6 +1848,84 @@ class TradeBot(BaseBot):
                         sl_percent = ((stop_loss - price) / price) * 100
                         tp_percent = ((price - take_profit) / price) * 100
                     
+                    # ═══════════════════════════════════════════════════════════════
+                    # V4.2: KOGNITIVE VALIDIERUNG (Ollama-basiert)
+                    # ═══════════════════════════════════════════════════════════════
+                    try:
+                        from cognitive_trading_intelligence import (
+                            CognitiveValidationPipeline,
+                            log_cognitive_decision
+                        )
+                        
+                        # Hole Ollama Settings
+                        ollama_url = settings.get('ollama_base_url', 'http://127.0.0.1:11434')
+                        ollama_model = settings.get('ollama_model', 'llama3:latest')
+                        cognitive_validation_enabled = settings.get('cognitive_validation', True)
+                        
+                        if cognitive_validation_enabled:
+                            logger.info(f"🧠 Kognitive Validierung für {commodity} {action}...")
+                            
+                            # Signal-Daten für Validierung
+                            signal_data = {
+                                'asset': commodity,
+                                'direction': action,
+                                'entry_price': price,
+                                'take_profit': take_profit,
+                                'stop_loss': stop_loss,
+                                'strategy': strategy,
+                                'confidence': confidence
+                            }
+                            
+                            # Historische Daten (vereinfacht - nutze Indikatoren)
+                            historical_data = [{
+                                'high': price * 1.02,
+                                'low': price * 0.98,
+                                'close': price,
+                                'open': price * 0.999
+                            } for _ in range(48)]  # 48h Dummy-Daten
+                            
+                            # Falls echte historische Daten verfügbar sind
+                            if hasattr(self, 'price_history') and commodity in self.price_history:
+                                historical_data = self.price_history[commodity][-48:]
+                            
+                            # Pipeline ausführen
+                            cognitive_pipeline = CognitiveValidationPipeline(ollama_url, ollama_model)
+                            cognitive_result = await cognitive_pipeline.validate_trade(
+                                signal_data=signal_data,
+                                historical_data=historical_data,
+                                current_portfolio_risk=current_risk,
+                                max_portfolio_risk=MAX_PORTFOLIO_RISK
+                            )
+                            
+                            # Log die Entscheidung
+                            log_data = {
+                                'asset': commodity,
+                                **{k: getattr(cognitive_result, k) for k in ['decision', 'confidence', 'reasoning', 'historical_feasibility', 'pro_arguments', 'contra_arguments', 'risk_assessment']}
+                            }
+                            await log_cognitive_decision(log_data)
+                            
+                            # VETO? Trade überspringen!
+                            if cognitive_result.decision == "VETO":
+                                logger.warning(f"🧠 VETO von Kognitiver KI: {cognitive_result.reasoning}")
+                                logger.warning(f"   Contra: {cognitive_result.contra_arguments}")
+                                trades_skipped += 1
+                                continue
+                            
+                            # TP/SL anpassen falls von KI vorgeschlagen
+                            if cognitive_result.adjusted_tp is not None:
+                                old_tp = take_profit
+                                take_profit = cognitive_result.adjusted_tp
+                                logger.info(f"🧠 TP angepasst: {old_tp:.2f} → {take_profit:.2f}")
+                            
+                            logger.info(f"🧠 GO von Kognitiver KI (Confidence: {cognitive_result.confidence}%)")
+                        else:
+                            logger.debug("Kognitive Validierung deaktiviert")
+                            
+                    except ImportError:
+                        logger.debug("Kognitive Validierung nicht verfügbar")
+                    except Exception as e:
+                        logger.warning(f"Kognitive Validierung fehlgeschlagen: {e} - Trade wird fortgesetzt")
+                    
                     # Trade ausführen
                     logger.info(f"📋 {platform}: Executing {action} {commodity} @ {price:.2f}")
 
