@@ -312,23 +312,35 @@ Zeit    | Profit | Peak
 
 ### Profit-Drawdown-Exit (20% vom Peak)
 
-**Bedingungen für Auto-Close:**
+**V3.3.3 WICHTIG: NUR IM GEWINN!**
+
+Der 20% Drawdown-Exit greift **NUR** wenn:
 1. Trade mindestens 30 Minuten offen
-2. Peak-Profit war positiv
-3. Aktueller Profit ≤ 80% vom Peak (= 20% Drawdown)
+2. Peak-Profit war positiv (Trade war im Plus)
+3. **Aktueller Profit ist NOCH POSITIV (> 0)**
+4. Aktueller Profit ≤ 80% vom Peak
+
+**KEIN Drawdown-Exit wenn Trade im Minus ist!**
 
 **Formel:**
 ```
-profit_drawdown_ratio = (peak_profit - current_profit) / peak_profit
-
-Wenn profit_drawdown_ratio >= 0.20 → AUTO-CLOSE
+Nur wenn current_profit > 0:
+    profit_drawdown_ratio = (peak_profit - current_profit) / peak_profit
+    Wenn profit_drawdown_ratio >= 0.20 → AUTO-CLOSE
 ```
 
-**Beispiel:**
+**Beispiel (KORREKT):**
 ```
 Peak: €100
-Aktuell: €75
-Drawdown: (100-75)/100 = 25% → AUTO-CLOSE (>20%)
+Aktuell: €75 (im Plus!)
+Drawdown: (100-75)/100 = 25% → AUTO-CLOSE ✅
+```
+
+**Beispiel (KEIN EXIT):**
+```
+Peak: €100
+Aktuell: -€20 (im Minus!)
+→ KEIN AUTO-CLOSE! Trade im Minus wird nicht wegen Drawdown geschlossen ❌
 ```
 
 ### Weitere Risk Circuits:
