@@ -13,6 +13,124 @@
 10. [Handelszeiten](#10-handelszeiten)
 11. [News-Filter](#11-news-filter)
 12. [Trading-Modi](#12-trading-modi)
+13. [**NEU V4.2: Kognitive Trading Intelligenz**](#13-kognitive-trading-intelligenz-v42)
+
+---
+
+## 13. Kognitive Trading Intelligenz (V4.2)
+
+### Architektur der Kognitiven Validierung
+
+Die KI durchläuft eine **dreistufige Analyse-Pipeline** bevor ein Trade ausgeführt wird:
+
+#### Stufe A: Historische Machbarkeits-Analyse
+```
+Prüft ob das Ziel (Take Profit) im Kontext der letzten 48 Stunden überhaupt existiert.
+
+Beispiel:
+- Signal: Buy Gold, TP = 2.150
+- 48h-Hoch: 2.120
+- Ergebnis: VETO - Ziel nie in 48h erreicht, keine News für Anomalie
+```
+
+**Berechnete Metriken:**
+- 48h High/Low/Avg
+- ATR (Average True Range)
+- Volatilitäts-Standardabweichung
+- Statistische Anomalie-Erkennung
+
+#### Stufe B: Strategisches Reasoning (Advocatus Diaboli)
+```
+Ollama führt eine INTERNE DEBATTE:
+
+1. Optimist: Findet 3 Gründe FÜR den Trade
+2. Auditor: Findet 3 Gründe GEGEN den Trade
+3. Gewichtung: Nur wenn Pro > Contra → FREIGABE
+```
+
+**Beispiel-Contra-Argumente:**
+- Sinkendes Volumen bei Breakout-Signal
+- Bärische Divergenz im höheren Zeitrahmen
+- Negative Korrelation mit fallenden US-Indizes
+
+#### Stufe C: Asset-Spezifisches Kontext-Wissen
+```
+Die KI kennt die NUANCEN jedes der 50 Assets:
+
+- Metalle: DXY als Schattensignal, geopolitische Lage
+- Forex: Session-Intelligenz (DAX 17:00 = künstliche Volatilität)
+- Energie: OPEC-Stimmung, Brent/WTI-Spread
+- Crypto: Weekend-Dumps, ETF-Flows
+```
+
+### Asset Intelligence Database
+
+| Asset | Kategorie | Schlüssel-Korrelationen | Vermeiden |
+|-------|-----------|------------------------|-----------|
+| GOLD | Edelmetalle | DXY (invers), USDJPY, VIX | FOMC-Tage, NFP |
+| WTI_CRUDE | Energie | BRENT, CAD-Pairs, Lagerbestände | EIA-Report ohne Hedge |
+| EURUSD | Forex | DXY, DE-US Zinsdifferenz | NFP ohne Absicherung |
+| BITCOIN | Crypto | NASDAQ, Risk-Sentiment | Weekend ohne SL |
+| DAX40 | Indizes | EUROSTOXX50, EUR/USD | 17:00 CET Close |
+
+### Kognitive Entscheidungslogik
+
+```python
+# Pseudocode der Validierung
+def validate_trade(signal):
+    # 1. SICHERHEITS-CHECK (Hart)
+    if portfolio_risk >= 20%:
+        return VETO("Portfolio-Risiko zu hoch")
+    
+    # 2. HISTORISCHE MACHBARKEIT
+    feasibility = analyze_48h_history(signal.asset, signal.tp)
+    if feasibility < 30:
+        return VETO("Ziel historisch unrealistisch")
+    
+    # 3. STRATEGISCHES REASONING
+    pro_arguments = ollama.generate_pro(signal)
+    contra_arguments = ollama.generate_contra(signal)
+    
+    if weight(contra) > weight(pro):
+        return VETO(contra_arguments)
+    
+    # 4. ANPASSUNG
+    if target_out_of_range:
+        signal.tp = adjust_to_48h_max()
+    
+    return GO(confidence)
+```
+
+### Settings für Kognitive Validierung
+
+| Setting | Default | Beschreibung |
+|---------|---------|--------------|
+| `cognitive_validation` | true | Master-Schalter |
+| `cognitive_historical_check` | true | 48h-Machbarkeits-Check |
+| `cognitive_reasoning_enabled` | true | Ollama Pro/Contra Debatte |
+| `cognitive_min_feasibility` | 30 | Mindest-Score (0-100) |
+| `ollama_base_url` | http://127.0.0.1:11434 | Lokaler Ollama Server |
+| `ollama_model` | llama3:latest | Ollama Modell |
+
+### Logging & Nachverfolgbarkeit
+
+Alle kognitiven Entscheidungen werden in `/app/backend/trade_logic_log.md` protokolliert:
+
+```markdown
+## 2026-02-01 14:35:22 - VETO
+
+**Asset:** GOLD
+**Confidence:** 35%
+**Historische Machbarkeit:** 25%
+
+### Begründung
+Pro-Gewicht: 45, Contra-Gewicht: 65, Netto: -20
+
+### Contra-Argumente
+- TP liegt außerhalb des 48h-Bereichs (Max: 2118.50)
+- DXY steigt - negativ für Gold
+- Volumen unter Durchschnitt
+```
 
 ---
 
